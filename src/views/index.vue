@@ -16,7 +16,7 @@ export default {
       imgList: [
         {
           title: "1",
-          src: require('@/assets/tree.jpg'),
+          src: require('@/assets/coffe2.jpg'),
         },
          {
           title: "2",
@@ -24,11 +24,7 @@ export default {
         },
          {
           title: "3",
-          src: require('@/assets/tree.jpg'),
-        },
-         {
-          title: "4",
-          src: require('@/assets/tree.jpg'),
+          src: require('@/assets/computer.jpg'),
         },
       ],
     };

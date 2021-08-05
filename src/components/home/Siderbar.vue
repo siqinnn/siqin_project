@@ -73,7 +73,7 @@ export default {
   overflow: visible !important;
 }
 .Siderbar .toggle {
-  background: #000;
+  background: #242424;
   display: block;
   position: absolute;
   font-size: 18px;
