@@ -8,7 +8,7 @@
         <el-aside width="auto"><Siderbar /></el-aside>
         <el-container>
           <el-main><router-view /></el-main>
-          <el-footer><Footerbar /></el-footer>
+          <!-- <el-footer><Footerbar /></el-footer> -->
         </el-container>
       </el-container>
     </el-container>
@@ -17,13 +17,13 @@
 <script>
 import Siderbar from "./home/Siderbar";
 import Headerbar from "./home/Headerbar";
-import Footerbar from "./home/Footerbar";
+// import Footerbar from "./home/Footerbar";
 export default {
   name: "Home",
   components: {
     Siderbar,
     Headerbar,
-    Footerbar,
+    // Footerbar,
   },
 };
 </script>

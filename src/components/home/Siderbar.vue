@@ -98,7 +98,7 @@ export default {
   color: #303133;
 }
 .el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
+  width: 300px;
   min-height: 400px;
 }
 </style>
