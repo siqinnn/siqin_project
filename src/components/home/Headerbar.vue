@@ -2,7 +2,7 @@
   <div class="Headerbar">
     <!-- <el-row :gutter="10">
       <el-col :span="12" :offset="6"> -->
-        <span class="title"> S I Q I N</span>
+        <span class="title"> The front-end component</span>
       <!-- </el-col>
       <el-col :span="12" :offset="6">  -->
         <span class="hint">My little project</span>

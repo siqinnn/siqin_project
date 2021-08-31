@@ -50,21 +50,21 @@ export default {
       cityList: [],
       tableData: [],
       titleData: [
-        // {
-        //   src: require("@/assets/1.jpg"),
-        // },
-        // {
-        //   src: require("@/assets/2.jpg"),
-        // },
-        // {
-        //   src: require("@/assets/3.jpg"),
-        // },
-        // {
-        //   src: require("@/assets/4.jpg"),
-        // },
-        // {
-        //   src: require("@/assets/5.jpg"),
-        // },
+        {
+          src: require("@/assets/1.jpg"),
+        },
+        {
+          src: require("@/assets/2.jpg"),
+        },
+        {
+          src: require("@/assets/3.jpg"),
+        },
+        {
+          src: require("@/assets/4.jpg"),
+        },
+        {
+          src: require("@/assets/5.jpg"),
+        },
       ],
       title1Data: [
         {
@@ -101,28 +101,28 @@ export default {
   },
   components: {},
   mounted() {
-    this.clickMe();
-    this.getTitleData();
+    // this.clickMe();
+    // this.getTitleData();
   },
   methods: {
-    clickMe() {
-      // 这里请求的地址要和mock中定义的请求地址一致
-      this.$axios.get("http://localhost:8081/test/city").then((res) => {
-        console.log(77, res);
-        if (res.data) {
-          this.cityList = res.data.cityList;
-        }
-      });
-    },
-    getTitleData() {
-      // 这里请求的地址要和mock中定义的请求地址一致
-      this.$axios.get("http://localhost:8081/test/titleData").then((res) => {
-        console.log(77, res);
-        if (res.data) {
-          this.titleData = res.data.titleData;
-        }
-      });
-    },
+    // clickMe() {
+    //   // 这里请求的地址要和mock中定义的请求地址一致
+    //   this.$axios.get("http://localhost:8081/test/city").then((res) => {
+    //     console.log(77, res);
+    //     if (res.data) {
+    //       this.cityList = res.data.cityList;
+    //     }
+    //   });
+    // },
+    // getTitleData() {
+    //   // 这里请求的地址要和mock中定义的请求地址一致
+    //   this.$axios.get("http://localhost:8081/test/titleData").then((res) => {
+    //     console.log(77, res);
+    //     if (res.data) {
+    //       this.titleData = res.data.titleData;
+    //     }
+    //   });
+    // },
   },
 };
 </script>

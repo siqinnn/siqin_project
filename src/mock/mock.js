@@ -1,48 +1,63 @@
-import Mock from 'mockjs'
-const Random = Mock.Random
-// mock需要给三个参数,url(与axios请求是传的url一致,我这个是本地启动的项目就直接用本地域名了)
-// 请求类型: get post...其他看文档
-// 数据处理函数,函数需要return数据
-Mock.mock('http://localhost:8081/test/city', 'get', () => {
-  let citys = []
-  for (let i = 0; i < 10; i++) {
-    let obj = {
-      id: i + 1,
-      city: Random.city(),
-      color: Random.color()
-    }
-    citys.push(obj)
-  }
-  return {
-    cityList: citys
-  }
-})
-// post请求,带参数,参数会在data中返回,会返回url,type,body三个参数,可以把data打印出来看看
-Mock.mock('http://localhost:8081/test/cityInfo', 'post', (data) => {
-  // 请求传过来的参数在body中,传回的是json字符串,需要转义一下
-  const info = JSON.parse(data.body)
-  return {
-    img: Random.image('200x100', '#4A7BF7', info.name)
-  }
-})
-Mock.mock('http://localhost:8081/test/titleData', 'get', () => {
-  let titleData = [{
-      src: require("@/assets/1.jpg"),
-    },
-    {
-      src: require("@/assets/2.jpg"),
-    },
-    {
-      src: require("@/assets/3.jpg"),
-    },
-    {
-      src: require("@/assets/4.jpg"),
-    },
-    {
-      src: require("@/assets/5.jpg"),
-    },
-  ]
-  return {
-    titleData: titleData
-  }
-})
+// import Mock from 'mockjs'
+// // 模拟数据列表
+// var arr = [];
+// for (let i = 0; i < 10; i++) {
+//   let newArticleObject = {
+//     name: '小明',
+//     content: '内容',
+//     id: i
+//   }
+//   arr.push(newArticleObject); //将模拟的数据放到数组中
+// }
+
+// // 数据的删除操作
+// let list = function (options) {
+//   // console.log(options.type);
+//   let rtype = options.type.toLowerCase(); //获取请求的类型并转换为小写
+//   switch (rtype) {
+//     case 'get': {
+//       break;
+//     }
+//     case 'post': {
+//       let id = parseInt(JSON.parse(options.body).params.id); // 获取请求的id，将options.body转换为JSON对象
+//       arr = arr.filter(function (val) {
+//         return val.id != id; // 过滤掉前台传过来的id对应的相应数据，并重新返回
+//       });
+//       break;
+//     }
+//     default:
+//       break;
+//   }
+//   return {
+//     data: arr
+//   }
+// }
+// Mock.mock('/list', /get|post/i, list);
+
+// // 数据的添加操作
+// let listAdd = function (options) {
+//   //  console.log("传过来的数据"+JSON.parse(options.body).params.obj);
+//   let obj = JSON.parse(options.body).params.obj;
+//   // console.log("数据获取"+ obj);
+//   arr = arr.concat(obj); // 将前台返回来的数据，拼接到数组中。
+ 
+//   return {
+//     data: arr
+//   }
+// }
+// Mock.mock('/listAdd', /get|post/i, listAdd);
+
+// // 数据的修改操作
+// let listUpdate = function (options) {
+//   let obj = JSON.parse(options.body).params.obj;
+//   // console.log(JSON.parse(options.body).params);
+//   // let id = parseInt(JSON.parse(options.body).params.obj.id);
+//   arr = arr.map(val => { // 将需要替换的数据替换掉
+//     // console.log(val)
+//     return val.id == obj.id ? obj : val;
+//   });
+//   return {
+//     data: arr
+//   }
+// }
+// Mock.mock('/listUpdate', /get|post/i, listUpdate);

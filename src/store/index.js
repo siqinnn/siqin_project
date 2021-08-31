@@ -5,11 +5,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    tableData: localStorage.getItem('tableData') ? JSON.stringify(localStorage.getItem('tableData')) : null
   },
-  mutations: {
+  getters: {
+    gettableData(state) {
+      return state.tableData
+    }
   },
-  actions: {
-  },
-  modules: {
-  }
+  mutations: {},
+  actions: {},
+  modules: {}
 })

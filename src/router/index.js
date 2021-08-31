@@ -3,7 +3,10 @@ import VueRouter from 'vue-router'
 import Layout from '../components/Layout.vue'
 import Index from '../views/index.vue'
 Vue.use(VueRouter)
-
+const originalPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function push(location) {
+	return originalPush.call(this, location).catch((err) => err);
+};
 const routes = [
   {
 		path: '/',
@@ -18,14 +21,22 @@ const routes = [
 				},
 				component: Index
 			},
-			// {
-			// 	path: '/userCenter',
-			// 	name: 'UserCenter',
-			// 	meta: {
-			// 		title: "修改密码"
-			// 	},
-			// 	component: () => import('@/views/UserCenter.vue')
-			// },
+			{
+				path: '/labelList',
+				name: 'labelList',
+				meta: {
+					title: "html标签"
+				},
+				component: () => import('@/views/html/labelList.vue'),
+			},
+			{
+				path: '/elasticlayout',
+				name: 'elasticlayout',
+				meta: {
+					title: "弹性布局"
+				},
+				component: () => import('@/views/html/elasticlayout.vue'),
+			},
 		]
 	},
 ]
