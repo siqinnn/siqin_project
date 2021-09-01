@@ -52,7 +52,7 @@ export default {
   
   name: "Siderbar",
   data() {
-    
+    // 卡门卡门
     return {
       activelist:this.$route.name,
       isCollapse: true,
@@ -65,7 +65,7 @@ export default {
           title: "Home page",
           icon: "el-icon-s-home",
           path: "/Index",
-          children: [], //是否有子菜单，若没有，则为[]
+          children: [], 
         },
         {
           index: "2",
