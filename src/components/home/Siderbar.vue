@@ -49,10 +49,8 @@
 </template>
 <script>
 export default {
-  
   name: "Siderbar",
   data() {
-    // 卡门卡门
     return {
       activelist:this.$route.name,
       isCollapse: true,
