@@ -45,7 +45,6 @@ const routes = [
 				},
 				component: () => import('@/views/js/jsmethod.vue'),
 			},
-			
 			{
 				path: '/bugchange',
 				name: 'bugchange',
@@ -54,6 +53,15 @@ const routes = [
 				},
 				component: () => import('@/views/bug/bugchange.vue'),
 			},
+			{
+				path: '/somefeatures',
+				name: 'somefeatures',
+				meta: {
+					title: "一些功能"
+				},
+				component: () => import('@/views/js/somefeatures.vue'),
+			},
+			
 		]
 	},
 ]

@@ -95,12 +95,12 @@ export default {
               title: "Javascript方法",
               children: [],
             },
-            // {
-            //   index: "7",
-            //   path: "",
-            //   title: "",
-            //   children: [],
-            // },
+            {
+              index: "7",
+              path: "/somefeatures",
+              title: "some features",
+              children: [],
+            },
           ], 
         },
         {
@@ -111,7 +111,7 @@ export default {
              {
               index: "9",
               path: "/bugchange",
-              title: "some bug changes",
+              title: "encountered bug",
               children: [],
             },
           ], 

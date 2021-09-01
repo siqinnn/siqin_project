@@ -119,8 +119,23 @@ let jsmethodData = [{
     code: "const average = (arr) => arr.reduce((a, b) => a + b) / arr.length"
   },
 ]
+let bugData = [{
+    name: "后台下载文件无法下载时候 后台加这个",
+    img: require("@/assets/bug1.png"),
+    code: "corsConfiguration.addExposeHeader(HttpHeaders.CONTENT_DISPOSITION)"
+  },
+  {
+    name: "vue的table动态添加标签",
+    img: require("@/assets/bug2.png"),
+    code: `<pre>
+renderHeader(h, { column }) {
+   return h("div", [h("span", column.label),
+   h("i", {class: "el-icon-caret-bottom",}) ]);},</pre>`
+  }
+]
 export default {
   labelData,
   disflexData,
-  jsmethodData
+  jsmethodData,
+  bugData
 }
