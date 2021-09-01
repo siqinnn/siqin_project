@@ -37,6 +37,23 @@ const routes = [
 				},
 				component: () => import('@/views/html/elasticlayout.vue'),
 			},
+			{
+				path: '/jsmethod',
+				name: 'jsmethod',
+				meta: {
+					title: "Javascript方法"
+				},
+				component: () => import('@/views/js/jsmethod.vue'),
+			},
+			
+			{
+				path: '/bugchange',
+				name: 'bugchange',
+				meta: {
+					title: "some bug changes"
+				},
+				component: () => import('@/views/bug/bugchange.vue'),
+			},
 		]
 	},
 ]

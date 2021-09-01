@@ -1,12 +1,14 @@
 <template>
-  <div class="labenList">
+  <div class="elasticlayout">
     <div class="titlediv">
       <span class="el-icon-ice-tea"></span>
       <span>弹性布局display：flex；</span>
     </div>
     <el-table :data="tableData" style="width: 100%" border>
-      <el-table-column prop="name" label="属性名" width="400"> </el-table-column>
-      <el-table-column prop="attributevalue" label="属性值" >
+      <el-table-column type="index" width="50"> </el-table-column>
+      <el-table-column prop="name" label="属性名" width="400">
+      </el-table-column>
+      <el-table-column prop="attributevalue" label="属性值">
         <template slot-scope="scope">
           <div v-html="scope.row.attributevalue"></div>
         </template>
@@ -46,7 +48,7 @@
 // import { mapGetters } from "vuex";
 import jsonData from "@/components/jsonData";
 export default {
-  name: "labenList",
+  name: "elasticlayout",
   data() {
     return {
       dialogtitle: "",
@@ -105,7 +107,7 @@ export default {
   line-height: 50px;
   text-align: left;
 }
-.labenList .el-table .cell {
+.elasticlayout .el-table .cell {
   white-space: pre-line !important;
 }
 </style>

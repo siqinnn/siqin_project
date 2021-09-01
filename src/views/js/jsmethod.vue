@@ -1,10 +1,9 @@
 <template>
-  <div class="labenList">
+  <div class="jsmethod">
     <div class="titlediv">
       <span class="el-icon-ice-tea"></span>
-      <span>html标签</span>
-
-      <el-input
+      <span>Javascript方法</span>
+      <!-- <el-input
         style="width:20%;float:right"
         placeholder="请输入内容"
         prefix-icon="el-icon-search"
@@ -15,15 +14,15 @@
           icon="el-icon-search"
           @click="search(inputdata)"
         ></el-button>
-      </el-input>
+      </el-input> -->
     </div>
 
     <el-table :data="tableData" style="width: 100%" border>
       <el-table-column type="index" width="50"> </el-table-column>
-      <el-table-column prop="name" label="标签名"> </el-table-column>
-      <el-table-column prop="explain" label="说明"> </el-table-column>
-      <el-table-column prop="remark" label="备注"> </el-table-column>
-      <el-table-column prop="use" label="用法"> </el-table-column>
+      <el-table-column prop="name" label="方法名字"> </el-table-column>
+      <el-table-column prop="code" label="代码"> </el-table-column>
+      <!-- <el-table-column prop="remark" label="备注"> </el-table-column>
+      <el-table-column prop="use" label="用法"> </el-table-column> -->
     </el-table>
   </div>
 </template>
@@ -31,7 +30,7 @@
 // import { mapGetters } from "vuex";
 import jsonData from "@/components/jsonData";
 export default {
-  name: "labenList",
+  name: "jsmethod",
   data() {
     return {
       inputdata: "",
@@ -42,25 +41,16 @@ export default {
   computed: {},
   components: {},
   methods: {
-    search(val) {
-      this.inputdata = val;
-      let obj = this.tableData.find((val) => val.name == this.inputdata);
-      this.tableData = [obj];
-    },
-    addlist() {
-      this.dialogVisible = true;
-    },
+    // search(val) {
+    //   this.inputdata = val;
+    //   let obj= this.tableData.find((val) => val.name == this.inputdata);
+    //   this.tableData=[obj];
+    // },
     resetForm() {},
     onSubmit() {},
   },
   mounted() {
-    this.tableData = jsonData.labelData;
-
-    // this.$axios.get("/list").then((res) => {
-
-    //   this.tableData = res.data.data;
-
-    // });
+    this.tableData = jsonData.jsmethodData;
   },
 };
 </script>

@@ -80,7 +80,47 @@ let disflexData = [{
     meaning: `<pre>与交叉轴的起点对齐</pre><pre>与交叉轴的终点对齐</pre><pre>与交叉轴的中点对齐</pre><pre>与交叉轴两端对齐，轴线之间的间隔平均分布</pre><pre>每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍</pre><pre>轴线占满整个交叉轴</pre>`
   },
 ]
+let jsmethodData = [{
+    name: "对比循环后返回一个值",
+    code: "this.city = this.eparchyInfo.find((val) => val.eparchyId == this.alarmForm.eparchyCode).eparchyName;"
+  },
+  {
+    name: "获取字符串中的字符数",
+    code: "const characterCount = (str, char) => str.split(char).length - 1"
+  }, {
+    name: "检查对象是否为空",
+    code: "const isEmpty = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === Object"
+  }, {
+    name: "等待一定时间后执行",
+    code: "const wait = async (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));"
+  }, {
+    name: "获取两个日期之间的天差",
+    code: "const daysBetween = (date1, date2) => Math.ceil(Math.abs(date1 - date2) / (1000 * 60 * 60 * 24))"
+  }, {
+    name: "重定向到另一个 URL",
+    code: "const redirect = url => location.href = url"
+  }, {
+    name: "检查设备上的触摸支持",
+    code: "const touchSupported = () => ('ontouchstart' in window || DocumentTouch && document instanceof DocumentTouch)"
+  }, {
+    name: "在元素后插入一串 HTML",
+    code: "const insertHTMLAfter = (html, el) => el.insertAdjacentHTML('afterend', html)"
+  }, {
+    name: "打乱数组",
+    code: "const shuffle = arr => arr.sort(() => 0.5 - Math.random())"
+  }, {
+    name: "在网页上获取选定的文本",
+    code: "const getSelectedText = () => window.getSelection().toString()"
+  }, {
+    name: "获取一个随机布尔值",
+    code: "const getRandomBoolean = () => Math.random() >= 0.5"
+  }, {
+    name: "计算数组的平均值",
+    code: "const average = (arr) => arr.reduce((a, b) => a + b) / arr.length"
+  },
+]
 export default {
   labelData,
-  disflexData
+  disflexData,
+  jsmethodData
 }

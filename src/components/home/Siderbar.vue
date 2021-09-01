@@ -91,14 +91,27 @@ export default {
           children: [
              {
               index: "6",
-              path: "",
-              title: "",
+              path: "/jsmethod",
+              title: "Javascript方法",
               children: [],
             },
-            {
-              index: "7",
-              path: "",
-              title: "",
+            // {
+            //   index: "7",
+            //   path: "",
+            //   title: "",
+            //   children: [],
+            // },
+          ], 
+        },
+        {
+          index: "8",
+          title: "With respect to bug changes",
+          icon: "el-icon-takeaway-box",
+          children: [
+             {
+              index: "9",
+              path: "/bugchange",
+              title: "some bug changes",
               children: [],
             },
           ], 
