@@ -4,12 +4,34 @@
       <!-- <router-link to="/">Home</router-link> | -->
       <!-- <router-link to="/about">About</router-link> -->
     </div>
-    <router-view/>
+    <router-view v-if="isrote" />
   </div>
 </template>
-
+<script>
+export default {
+  name: "index",
+  provide() {
+    return {
+      reload: this.reload,
+    };
+  },
+  data() {
+    return {
+      isrote: true,
+    };
+  },
+  methods: {
+    reload() {
+      this.isrote = false;
+      this.$nextTick(() => {
+        this.isrote = true;
+      });
+    },
+  },
+};
+</script>
 <style lang="scss">
-body{
+body {
   margin: 0;
   padding: 0;
 }
@@ -17,7 +39,7 @@ body{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  // text-align: center;
   color: #2c3e50;
 }
 

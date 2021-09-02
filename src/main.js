@@ -7,8 +7,10 @@ import 'element-ui/lib/theme-chalk/index.css';
 import './mock/mock.js'
 import axios from 'axios'
 import '../config/axios'
-import echarts from 'echarts'
-Vue.prototype.$echarts = echarts
+import VueClipboard from "vue-clipboard2";
+Vue.use(VueClipboard)
+// import echarts from 'echarts'
+// Vue.prototype.$echarts = echarts
 // 将axios挂载到Vue实例,在组件中可以直接使用
 Vue.prototype.$axios = axios
 // const originalPush = router.prototype.push

@@ -6,7 +6,7 @@
     </div>
 
     <el-table :data="tableData" style="width: 100%" border>
-      <el-table-column type="index" width="50"> </el-table-column>
+      <el-table-column type="index" width="50" label="序号" align="center"> </el-table-column>
       <el-table-column prop="name" label="方法名字"> </el-table-column>
       <el-table-column prop="code" label="详情">
         <template slot-scope="scope">
@@ -27,7 +27,7 @@
   </div>
 </template>
 <script>
-import jsonData from "@/components/jsonData";
+import jsonData from "@/components/json/jsonData";
 export default {
   name: "bugchange",
   data() {

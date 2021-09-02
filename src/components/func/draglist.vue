@@ -1,13 +1,10 @@
 <template>
   <div class="draglist">
     <div style="display:flex;flex-direction:row;margin-top:20px;">
-      <div
-        style="width: 50%;
-          height: 300px;border:1px dashed gray"
-      >
+      <div style="width: 50%;height: 300px;border:1px dashed gray">
         <div
-        style="text-align: left;"
-          v-for="(item,index) in stringData"
+          style="text-align: left;"
+          v-for="(item, index) in stringData"
           :key="index"
           draggable="true"
           @dragstart="draStart(item, 'startweidu')"
@@ -17,24 +14,21 @@
           <!-- <el-tooltip :content="item.name" disabled>
                 <p class="leftfontclass">{{item.age}}</p>
               </el-tooltip> -->
-          <el-tag type="success" >{{ item.age }}</el-tag>
+          <el-tag type="success">{{ item.age }}</el-tag>
         </div>
       </div>
-
       <div
         class="dimensionality-small overflowy"
         @dragover="drgOver('weidu')"
-        style="width: 50%;
-          height: 300px;border:1px dashed gray"
-      >
-        <div v-for="(item, index) in dimensionData" :key="index" style="text-align: left;">
+        style="width: 50%; height: 300px;border:1px dashed gray">
+        <div
+          v-for="(item, index) in dimensionData"
+          :key="index"
+          style="text-align: left;"
+        >
           <el-tag type="warning"> {{ item.age }}</el-tag>
-          <i
-            class="el-icon-close
-                "
-            @click="removelist(index)"
-          ></i>
-        </div>
+          <i class="el-icon-close" @click="removelist(index)"></i>
+        </div> 
       </div>
     </div>
   </div>
@@ -98,7 +92,7 @@ export default {
   computed: {},
   methods: {
     // draEnd: function(event) {
-      draEnd: function() {
+    draEnd: function() {
       this.$nextTick(() => {
         if (this.targNode === "weidu" && this.startNode === "startweidu") {
           let getNode = this.dragNode;
@@ -106,7 +100,6 @@ export default {
             name: getNode.name,
             age: getNode.age,
           };
-          // test
           this.dimensionData.push(obj);
         }
         // if (this.targNode === 'zhibiao' && this.startNode === 'startzhibiao') {
@@ -141,17 +134,13 @@ export default {
     drgOver: function(type) {
       this.targNode = type;
     },
-     mapclick() {
-        this.listadd = this.maplist.map((item) => ({
-          namee: item.name,
-          agee: item.age
-        }))
-        console.log(this.listadd)
-
-        console.log(this.listadd.slice(0, 1))
-      },
+    mapclick() {
+      this.listadd = this.maplist.map((item) => ({
+        namee: item.name,
+        agee: item.age,
+      }));
+    },
   },
 };
 </script>
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

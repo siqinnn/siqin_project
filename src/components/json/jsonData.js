@@ -133,9 +133,11 @@ renderHeader(h, { column }) {
    h("i", {class: "el-icon-caret-bottom",}) ]);},</pre>`
   }
 ]
+let copydata=`人生旅途中，总有人不断的走来，有人不断的离去，当新的名字变成老的名字，当老的名字渐渐模糊，又是一个故事的结束和一个故事的开始。在不断的相遇和错过中，终于明白：身边的人只能陪你走过或近或远的一程，而不能伴自己的一生；陪伴一生的是自己的名字和那些或清晰或模糊名字所带来的感动。`
 export default {
   labelData,
   disflexData,
   jsmethodData,
-  bugData
+  bugData,
+  copydata
 }
