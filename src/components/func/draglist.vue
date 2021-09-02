@@ -1,7 +1,7 @@
 <template>
   <div class="draglist">
     <div style="display:flex;flex-direction:row;margin-top:20px;">
-      <div style="width: 50%;height: 300px;border:1px dashed gray">
+      <div style="width: 50%;height: 300px;border:.1px dashed #999999;">
         <div
           style="text-align: left;"
           v-for="(item, index) in stringData"
@@ -20,7 +20,7 @@
       <div
         class="dimensionality-small overflowy"
         @dragover="drgOver('weidu')"
-        style="width: 50%; height: 300px;border:1px dashed gray">
+        style="width: 50%; height: 300px;border:.1px dashed #999999">
         <div
           v-for="(item, index) in dimensionData"
           :key="index"

@@ -1,7 +1,7 @@
 <template>
   <div class="copy">
     <div style="display:flex;flex-direction:row;margin-top:20px;">
-      <div style="width: 100%;height: 300px;border:1px dashed gray;">
+      <div style="width: 100%;height: 300px;border:.1px dashed #999999;">
         <div class="container">
           <p>{{ detail }}</p>
           <el-button
@@ -36,7 +36,7 @@ export default {
       console.log(a);
       this.$message({
         showClose: true,
-        message: "您已成功复制：" + a.text,
+        message: "复制成功",
         type: "success",
       });
     },
@@ -51,6 +51,7 @@ export default {
   margin: 20px;
   .fs12 {
     float: right;
+    
   }
 }
 </style>

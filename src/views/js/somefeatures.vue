@@ -36,6 +36,7 @@
         :options="editorOption"
       /> -->
       <MonacoEditor
+        width="100%"
         height="600"
         language="typescript"
         :code="codeData"
@@ -46,7 +47,7 @@
       >
       </MonacoEditor>
       <span slot="footer" class="dialog-footer">
-        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button @click="handleClose">取 消</el-button>
       </span>
     </el-dialog>
   </div>
@@ -64,7 +65,7 @@ import jsoncopy from "@/components/json/jsoncopy";
 import dragList from "@/components/func/draglist.vue";
 import copyandpaste from "@/components/func/copyandpaste.vue";
 export default {
-  inject:['reload'],
+  inject: ["reload"],
   name: "somefeatures",
   data() {
     return {
@@ -89,33 +90,22 @@ export default {
     // quillEditor,
   },
   methods: {
-    onMounted(editor) {
-      // console.log(this.$refs.editorref);
-      console.log(editor)
-      // this.editor = editor;
-    },
-    onCodeChange() {
-      // console.log(this.editor.getValue());
-    },
+    onMounted() {},
+    onCodeChange() {},
     viewclick(type) {
       console.log(type);
       this.clitype = type;
       this.dialogVisible = true;
-      this.$nextTick(() => {
-        if (type == "drag") {
-          this.codeData = jsondrag.aa;
-        }
-        if (type == "copy") {
-          this.codeData = jsoncopy.copy;
-        }
-      });
+      if (type == "drag") {
+        this.codeData = jsondrag.aa;
+      }
+      if (type == "copy") {
+        this.codeData = jsoncopy.copy;
+      }
     },
     handleClose() {
-
+      this.reload();
       this.dialogVisible = false;
-      this.$nextTick(() => {
-        this.reload()
-      });
     },
   },
   mounted() {

@@ -118,6 +118,12 @@ let jsmethodData = [{
     name: "计算数组的平均值",
     code: "const average = (arr) => arr.reduce((a, b) => a + b) / arr.length"
   },
+  {
+    name: "本地存取数据",
+    code: "sessionStorage.setItem('dataParamId', response.data.id);let getId = sessionStorage.getItem('dataParamId')"
+
+  },
+
 ]
 let bugData = [{
     name: "后台下载文件无法下载时候 后台加这个",
@@ -131,9 +137,15 @@ let bugData = [{
 renderHeader(h, { column }) {
    return h("div", [h("span", column.label),
    h("i", {class: "el-icon-caret-bottom",}) ]);},</pre>`
+  },
+  {
+    img: null,
+    name: "万能清除浮动",
+    code: `.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}.clearfloat{zoom:1}`
+
   }
 ]
-let copydata=`人生旅途中，总有人不断的走来，有人不断的离去，当新的名字变成老的名字，当老的名字渐渐模糊，又是一个故事的结束和一个故事的开始。在不断的相遇和错过中，终于明白：身边的人只能陪你走过或近或远的一程，而不能伴自己的一生；陪伴一生的是自己的名字和那些或清晰或模糊名字所带来的感动。`
+let copydata = `人生旅途中，总有人不断的走来，有人不断的离去，当新的名字变成老的名字，当老的名字渐渐模糊，又是一个故事的结束和一个故事的开始。在不断的相遇和错过中，终于明白：身边的人只能陪你走过或近或远的一程，而不能伴自己的一生；陪伴一生的是自己的名字和那些或清晰或模糊名字所带来的感动。`
 export default {
   labelData,
   disflexData,
