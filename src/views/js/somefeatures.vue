@@ -22,6 +22,22 @@
           </span>
           <copyandpaste /></div
       ></el-col>
+      <el-col :span="24"
+        ><div class="grid-content bg-purple-light grid-contentw">
+          <span class="smalltitle">搜索部分超出下拉</span>
+          <span class="smalltitle smalltitle1">
+            <el-button @click="viewclick('search')">查看代码</el-button>
+          </span>
+          <searchlist /></div
+      ></el-col>
+      <el-col :span="24"
+        ><div class="grid-content bg-purple-light grid-contentw">
+          <span class="smalltitle">校验</span>
+          <span class="smalltitle smalltitle1">
+            <el-button @click="viewclick('verify')">查看代码</el-button>
+          </span>
+          <verifylist /></div
+      ></el-col>
     </el-row>
     <el-dialog
       title="查看代码"
@@ -62,8 +78,13 @@ import MonacoEditor from "vue-monaco-editor";
 import jsonData from "@/components/json/jsonData";
 import jsondrag from "@/components/json/jsondrag";
 import jsoncopy from "@/components/json/jsoncopy";
+import jsonverify from "@/components/json/jsonverify";
+import jsonsearch from "@/components/json/jsonsearch";
 import dragList from "@/components/func/draglist.vue";
+import searchlist from "@/components/func/searchlist.vue";
 import copyandpaste from "@/components/func/copyandpaste.vue";
+import verifylist from "@/components/func/verifylist.vue";
+
 export default {
   inject: ["reload"],
   name: "somefeatures",
@@ -87,6 +108,8 @@ export default {
     copyandpaste,
     dragList,
     MonacoEditor,
+    searchlist,
+    verifylist
     // quillEditor,
   },
   methods: {
@@ -102,6 +125,13 @@ export default {
       if (type == "copy") {
         this.codeData = jsoncopy.copy;
       }
+      if (type == "search") {
+        this.codeData = jsonsearch.searchData;
+      }
+      if (type == "verify") {
+        this.codeData = jsonverify.verify;
+      }
+      verifylist
     },
     handleClose() {
       this.reload();
@@ -110,6 +140,7 @@ export default {
   },
   mounted() {
     this.tableData = jsonData.jsmethodData;
+    // console.log(jsonverify.verify)
   },
 };
 </script>
@@ -137,6 +168,10 @@ export default {
     .smalltitle1 {
       text-align: right !important;
     }
+  }
+  .grid-contentw {
+    margin-top: 20px;
+    width: 97.5%;
   }
 }
 </style>
