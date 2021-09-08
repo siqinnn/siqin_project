@@ -38,6 +38,22 @@
           </span>
           <verifylist /></div
       ></el-col>
+      <el-col :span="24"
+        ><div class="grid-content bg-purple-light grid-contentw">
+          <span class="smalltitle">数据可视化屏幕自适应</span>
+          <span class="smalltitle smalltitle1">
+            <el-button @click="viewclick('charts')">查看代码</el-button>
+          </span>
+          <echartlist /></div
+      ></el-col>
+      <el-col :span="12"
+        ><div class="grid-content bg-purple-light grid-contentw">
+          <span class="smalltitle">树的子内拖拽新增编辑删除</span>
+          <span class="smalltitle smalltitle1">
+            <el-button @click="viewclick('tree')">查看代码</el-button>
+          </span>
+          <treelist /></div
+      ></el-col>
     </el-row>
     <el-dialog
       title="查看代码"
@@ -79,12 +95,15 @@ import jsonData from "@/components/json/jsonData";
 import jsondrag from "@/components/json/jsondrag";
 import jsoncopy from "@/components/json/jsoncopy";
 import jsonverify from "@/components/json/jsonverify";
+import jsoncharts from "@/components/json/jsoncharts";
 import jsonsearch from "@/components/json/jsonsearch";
+import jsontree from "@/components/json/jsontree";
 import dragList from "@/components/func/draglist.vue";
 import searchlist from "@/components/func/searchlist.vue";
 import copyandpaste from "@/components/func/copyandpaste.vue";
 import verifylist from "@/components/func/verifylist.vue";
-
+import echartlist from "@/components/func/echartlist.vue";
+import treelist from "@/components/func/treelist.vue";
 export default {
   inject: ["reload"],
   name: "somefeatures",
@@ -109,7 +128,9 @@ export default {
     dragList,
     MonacoEditor,
     searchlist,
-    verifylist
+    verifylist,
+    echartlist,
+    treelist,
     // quillEditor,
   },
   methods: {
@@ -131,7 +152,12 @@ export default {
       if (type == "verify") {
         this.codeData = jsonverify.verify;
       }
-      verifylist
+      if (type == "charts") {
+        this.codeData = jsoncharts.chartsdata;
+      }
+      if (type == "tree") {
+        this.codeData = jsontree.treedata;
+      }
     },
     handleClose() {
       this.reload();

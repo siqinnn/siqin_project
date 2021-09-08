@@ -9,8 +9,8 @@ import axios from 'axios'
 import '../config/axios'
 import VueClipboard from "vue-clipboard2";
 Vue.use(VueClipboard)
-// import echarts from 'echarts'
-// Vue.prototype.$echarts = echarts
+import * as echarts from 'echarts'
+Vue.prototype.$echarts = echarts
 // 将axios挂载到Vue实例,在组件中可以直接使用
 Vue.prototype.$axios = axios
 // const originalPush = router.prototype.push
