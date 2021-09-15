@@ -5,6 +5,11 @@
       <span>一些功能</span>
     </div>
     <el-row :gutter="20">
+      <el-col :span="24" style="margin-bottom:20px">
+        <el-button @click="viewclick('export')">导出功能查看代码</el-button>
+        <el-button @click="viewclick('import')">导入功能查看代码</el-button>
+        <el-button @click="viewclick('axios')">封装的axios查看代码</el-button>
+      </el-col>
       <el-col :span="12">
         <div class="grid-content bg-purple">
           <span class="smalltitle">拖拽功能</span>
@@ -94,6 +99,10 @@ import MonacoEditor from "vue-monaco-editor";
 import jsonData from "@/components/json/jsonData";
 import jsondrag from "@/components/json/jsondrag";
 import jsoncopy from "@/components/json/jsoncopy";
+import jsonexportData from "@/components/json/jsonexportData";
+import jsonimportData from "@/components/json/jsonimportData";
+import jsonaxiosData from "@/components/json/jsonaxiosData";
+
 import jsonverify from "@/components/json/jsonverify";
 import jsoncharts from "@/components/json/jsoncharts";
 import jsonsearch from "@/components/json/jsonsearch";
@@ -157,6 +166,15 @@ export default {
       }
       if (type == "tree") {
         this.codeData = jsontree.treedata;
+      }
+      if (type == "export") {
+        this.codeData = jsonexportData.exportData;
+      }
+      if (type == "import") {
+        this.codeData = jsonimportData.importData;
+      }
+      if (type == "axios") {
+        this.codeData = jsonaxiosData.axiosData;
       }
     },
     handleClose() {
