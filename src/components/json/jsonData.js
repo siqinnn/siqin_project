@@ -148,15 +148,27 @@ renderHeader(h, { column }) {
     img: null,
     name: "循环的个体后加符号",
     code: `scope.row.sysRoles.map((i) => i.name).join(",")`
-
   },
   {
     img: null,
     name: "多条件三目运算",
     code: '{{`${fieldsValue1.declarationState=="0" ? "未审核" : ""}  ${fieldsValue1.declarationState =="1" ? " 审核通过" : ""} ${fieldsValue1.declarationState =="2" ? " 未通过" : ""} ${fieldsValue1.declarationState =="3" ? " 删除" : ""}`}}'
-
-  }
-  
+  },
+  {
+    img: null,
+    name: "复制道新的对象里",
+    code: `let formItem = Object.assign({}, formData);`
+  },
+  {
+    img: null,
+    name: "校验,queryForm是查询条件区域ref-queryForm",
+    code: `this.$refs["queryForm"].validate((valid) => { if (valid) {}}`
+  },
+  {
+    img: null,
+    name: "摆脱一遍又一遍地编写 console.log",
+    code: `let c = console.log.bind(document)|c('This is JavaScript')`
+  },
 ]
 let copydata = `人生旅途中，总有人不断的走来，有人不断的离去，当新的名字变成老的名字，当老的名字渐渐模糊，又是一个故事的结束和一个故事的开始。在不断的相遇和错过中，终于明白：身边的人只能陪你走过或近或远的一程，而不能伴自己的一生；陪伴一生的是自己的名字和那些或清晰或模糊名字所带来的感动。`
 export default {
