@@ -176,6 +176,13 @@ renderHeader(h, { column }) {
       return Object.prototype.toString.call(arr) === '[object Array]'
     }`
   },
+  {
+    img: null,
+    name: "三目运算多个条件",
+    code: `this.type=="2"?"A":this.type=="1"&&this.queryForm.double==true?"B":"C"`
+  },
+
+  
   
 
 ]
