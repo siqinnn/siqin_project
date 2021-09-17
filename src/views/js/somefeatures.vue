@@ -6,6 +6,7 @@
     </div>
     <el-row :gutter="20">
       <el-col :span="24" style="margin-bottom:20px" class="buttonclass">
+        <el-button @click="viewclick('all')">element增删改查table查看代码</el-button>
         <el-button @click="viewclick('export')">导出功能查看代码</el-button>
         <el-button @click="viewclick('import')">导入功能查看代码</el-button>
         <el-button @click="viewclick('axios')">封装的axios查看代码</el-button>
@@ -20,11 +21,21 @@
           >时间与时间戳转换查看代码</el-button
         >
         <el-button @click="viewclick('pc')">是否为PC端查看代码</el-button>
-        <el-button @click="viewclick('random')">生成随机数范围查看代码</el-button>
-        <el-button @click="viewclick('img')">判断图片加载完成查看代码</el-button>
-        <el-button @click="viewclick('cursor')">光标所在位置插入字符查看代码</el-button>
-        <el-button @click="viewclick('base')">光图片地址转base64查看代码</el-button>
-        <el-button @click="viewclick('down')">base64图片下载功能查看代码</el-button>
+        <el-button @click="viewclick('random')"
+          >生成随机数范围查看代码</el-button
+        >
+        <el-button @click="viewclick('img')"
+          >判断图片加载完成查看代码</el-button
+        >
+        <el-button @click="viewclick('cursor')"
+          >光标所在位置插入字符查看代码</el-button
+        >
+        <el-button @click="viewclick('base')"
+          >光图片地址转base64查看代码</el-button
+        >
+        <el-button @click="viewclick('down')"
+          >base64图片下载功能查看代码</el-button
+        >
         <el-button @click="viewclick('func')">函数防抖与节流查看代码</el-button>
       </el-col>
       <el-col :span="12">
@@ -109,6 +120,7 @@ import jsonexportData from "@/components/json/jsonexportData";
 import jsonimportData from "@/components/json/jsonimportData";
 import jsonaxiosData from "@/components/json/jsonaxiosData";
 import jsonsaveData from "@/components/json/jsonsaveData";
+import jsonallData from "@/components/json/jsonallData";
 import jsonverify from "@/components/json/jsonverify";
 import jsoncharts from "@/components/json/jsoncharts";
 import jsonsearch from "@/components/json/jsonsearch";
@@ -179,7 +191,7 @@ export default {
       if (type == "import") {
         this.codeData = jsonimportData.importData;
       }
-      if (type == "axios") {                                                                                                
+      if (type == "axios") {
         this.codeData = jsonaxiosData.axiosData;
       }
       if (type == "save") {
@@ -212,12 +224,15 @@ export default {
       if (type == "base") {
         this.codeData = jsonsaveData.baseData;
       }
-       if (type == "down") {
+      if (type == "down") {
         this.codeData = jsonsaveData.downData;
       }
-       if (type == "func") {
+      if (type == "func") {
         this.codeData = jsonsaveData.funcData;
-       }
+      }
+      if (type == "all") {
+        this.codeData = jsonallData.allData;
+      }
     },
     handleClose() {
       this.reload();
@@ -226,6 +241,7 @@ export default {
   },
   mounted() {
     this.tableData = jsonData.jsmethodData;
+    
   },
 };
 </script>
