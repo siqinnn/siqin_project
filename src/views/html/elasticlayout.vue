@@ -4,8 +4,10 @@
       <span class="el-icon-ice-tea"></span>
       <span>弹性布局display：flex；</span>
     </div>
-    <el-table :data="tableData" style="width: 100%" border>
-      <el-table-column type="index" width="50" label="序号" align="center"> </el-table-column>
+    <el-button @click="exportExcel" style="float:right;margin-bottom:10px">点击导出弹性布局</el-button>
+    <el-table :data="tableData" style="width: 100%" border id="out-eltable">
+      <el-table-column type="index" width="50" label="序号" align="center">
+      </el-table-column>
       <el-table-column prop="name" label="属性名" width="400">
       </el-table-column>
       <el-table-column prop="attributevalue" label="属性值">
@@ -45,6 +47,9 @@
   </div>
 </template>
 <script>
+import FileSaver from "file-saver";
+
+import XLSX from "xlsx";
 // import { mapGetters } from "vuex";
 import jsonData from "@/components/json/jsonData";
 export default {
@@ -62,6 +67,24 @@ export default {
   },
   components: {},
   methods: {
+    // npm install --save xlsx file-saver
+    exportExcel() {
+      var wb = XLSX.utils.table_to_book(document.querySelector("#out-eltable"));
+      var wbout = XLSX.write(wb, {
+        bookType: "xlsx",
+        bookSST: true,
+        type: "array",
+      });
+      try {
+        FileSaver.saveAs(
+          new Blob([wbout], { type: "application/octet-stream" }),
+          "弹性布局.xlsx"
+        );
+      } catch (e) {
+        if (typeof console !== "undefined") console.log(e, wbout);
+      }
+      return wbout;
+    },
     addlist() {
       this.dialogVisible = true;
     },
