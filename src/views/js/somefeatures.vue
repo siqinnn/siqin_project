@@ -37,6 +37,8 @@
           >base64图片下载功能查看代码</el-button
         >
         <el-button @click="viewclick('func')">函数防抖与节流查看代码</el-button>
+         <el-button @click="viewclick('tableedit')">table列表内编辑</el-button>
+  
       </el-col>
       <el-col :span="12">
         <div class="grid-content bg-purple">
@@ -116,6 +118,7 @@ import MonacoEditor from "vue-monaco-editor";
 import jsonData from "@/components/json/jsonData";
 import jsondrag from "@/components/json/jsondrag";
 import jsoncopy from "@/components/json/jsoncopy";
+import jsoneditData from "@/components/json/jsoneditData";
 import jsonexportData from "@/components/json/jsonexportData";
 import jsonimportData from "@/components/json/jsonimportData";
 import jsonaxiosData from "@/components/json/jsonaxiosData";
@@ -131,6 +134,7 @@ import copyandpaste from "@/components/func/copyandpaste.vue";
 import verifylist from "@/components/func/verifylist.vue";
 import echartlist from "@/components/func/echartlist.vue";
 import treelist from "@/components/func/treelist.vue";
+
 export default {
   inject: ["reload"],
   name: "somefeatures",
@@ -232,6 +236,10 @@ export default {
       }
       if (type == "all") {
         this.codeData = jsonallData.allData;
+      }
+      
+       if (type == "tableedit") {
+        this.codeData = jsoneditData.editData;
       }
     },
     handleClose() {

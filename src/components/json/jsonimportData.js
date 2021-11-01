@@ -188,7 +188,7 @@ let importData=`
             * 下载失败文件
             **/
             downloadFail() {
-                let type = this.url.match(/\/([^/]*)$/)[1];
+                let type = this.url.match(/'xieang'/([^/]*)$/)[1];
                 this.$downloadFile('userDispatch/exportErrorImport/￥{this.batchId}?type=￥{type}')
             }
         },
