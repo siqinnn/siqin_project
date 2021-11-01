@@ -56,6 +56,29 @@ const formatDate = function(fmt, date) { // 时间格式化 【'yyyy-MM-dd hh:mm
   }
   return fmt
 }
+/////////////////////////////////////////////////////
+methods: {
+  getLastMonth() {
+    var now = new Date();
+    now.setMonth(now.getMonth() - 1);
+    var year = now.getFullYear(); //得到年份
+    var month = now.getMonth() + 1; //得到月份
+    // var date = now.getDate(); //得到日期
+    // var hour =" 00:00:00";
+    month = month.toString().padStart(2, "0");
+    // date = date.toString().padStart(2, "0");
+    var startDate = '￥{year}￥{month}';
+    return startDate;
+    this.$set(this.info, "contractLastDate", startDate);
+  },
+}
+return {
+  contractLastDate: this.getLastMonth(),
+}
+mounted() {
+  this.queryForm.statMonth = this.contractLastDate;
+  this.getLastMonth();
+}
 `
 let fetchData = `
 

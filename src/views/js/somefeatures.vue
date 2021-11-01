@@ -6,7 +6,9 @@
     </div>
     <el-row :gutter="20">
       <el-col :span="24" style="margin-bottom:20px" class="buttonclass">
-        <el-button @click="viewclick('all')">element增删改查table查看代码</el-button>
+        <el-button @click="viewclick('all')"
+          >element增删改查table查看代码</el-button
+        >
         <el-button @click="viewclick('export')">导出功能查看代码</el-button>
         <el-button @click="viewclick('import')">导入功能查看代码</el-button>
         <el-button @click="viewclick('axios')">封装的axios查看代码</el-button>
@@ -37,8 +39,7 @@
           >base64图片下载功能查看代码</el-button
         >
         <el-button @click="viewclick('func')">函数防抖与节流查看代码</el-button>
-         <el-button @click="viewclick('tableedit')">table列表内编辑</el-button>
-  
+        <!-- <el-button @click="viewclick('tableedit')">table列表内编辑</el-button> -->
       </el-col>
       <el-col :span="12">
         <div class="grid-content bg-purple">
@@ -82,12 +83,20 @@
           <echartlist /></div
       ></el-col>
       <el-col :span="12"
-        ><div class="grid-content bg-purple-light grid-contentw">
+        ><div class="grid-content bg-purple bg-purple-margin">
           <span class="smalltitle">树的子内拖拽新增编辑删除</span>
           <span class="smalltitle smalltitle1">
             <el-button @click="viewclick('tree')">查看代码</el-button>
           </span>
           <treelist /></div
+      ></el-col>
+      <el-col :span="12"
+        ><div class="grid-content bg-purple-light bg-purple-margin">
+          <span class="smalltitle">table表格内编辑</span>
+          <span class="smalltitle smalltitle1">
+            <el-button @click="viewclick('tableedit')">查看代码</el-button>
+          </span>
+          <tableditlist /></div
       ></el-col>
     </el-row>
     <el-dialog
@@ -131,6 +140,7 @@ import jsontree from "@/components/json/jsontree";
 import dragList from "@/components/func/draglist.vue";
 import searchlist from "@/components/func/searchlist.vue";
 import copyandpaste from "@/components/func/copyandpaste.vue";
+import tableditlist from "@/components/func/tableditlist.vue";
 import verifylist from "@/components/func/verifylist.vue";
 import echartlist from "@/components/func/echartlist.vue";
 import treelist from "@/components/func/treelist.vue";
@@ -155,6 +165,7 @@ export default {
   },
   computed: {},
   components: {
+    tableditlist,
     copyandpaste,
     dragList,
     MonacoEditor,
@@ -237,8 +248,8 @@ export default {
       if (type == "all") {
         this.codeData = jsonallData.allData;
       }
-      
-       if (type == "tableedit") {
+
+      if (type == "tableedit") {
         this.codeData = jsoneditData.editData;
       }
     },
@@ -249,7 +260,6 @@ export default {
   },
   mounted() {
     this.tableData = jsonData.jsmethodData;
-    
   },
 };
 </script>
@@ -282,6 +292,10 @@ export default {
     margin-top: 20px;
     width: 97.5%;
   }
+  .bg-purple-margin{
+    margin-top: 20px;
+  }
+
   .buttonclass button {
     margin-top: 10px;
     margin-left: 0;

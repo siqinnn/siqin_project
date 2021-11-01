@@ -244,7 +244,7 @@ export default {
           value: "value",
         },
       ],
-      isOpen: false,
+      isOpen: true,
     };
   },
   computed: {},
