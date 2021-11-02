@@ -101,6 +101,12 @@ export default {
               title: "some features",
               children: [],
             },
+            {
+              index: "8",
+              path: "/splitscreen",
+              title: "split Screen",
+              children: [],
+            },
           ], 
         },
         {

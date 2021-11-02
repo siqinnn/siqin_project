@@ -8,6 +8,7 @@ import './mock/mock.js'
 import axios from 'axios'
 import '../config/axios'
 import VueClipboard from "vue-clipboard2";
+import components from "./components/index"
 Vue.use(VueClipboard)
 import * as echarts from 'echarts'
 Vue.prototype.$echarts = echarts
@@ -19,6 +20,7 @@ Vue.prototype.$axios = axios
 // }
 Vue.config.productionTip = false
 Vue.use(ElementUI)
+Vue.use(components)
 new Vue({
   router,
   store,

@@ -61,6 +61,14 @@ const routes = [
 				},
 				component: () => import('@/views/js/somefeatures.vue'),
 			},
+			{
+				path: '/splitscreen',
+				name: 'splitscreen',
+				meta: {
+					title: "左右分屏"
+				},
+				component: () => import('@/views/js/splitscreen.vue'),
+			},
 			
 		]
 	},
