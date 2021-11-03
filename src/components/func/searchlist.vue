@@ -177,7 +177,7 @@
           :sm="24"
           :md="12"
           :lg="6"
-          :xl="6"
+          :xl="12"
         >
           <el-button @click="getList" type="primary">查询</el-button>
           <el-button @click="resetForm('queryForm')" type="info"
@@ -196,7 +196,7 @@
           :sm="24"
           :md="6"
           :lg="24"
-          :xl="24"
+          :xl="6"
         >
           <el-button @click="getList" type="primary">查询</el-button>
           <el-button @click="resetForm('queryForm')" type="info"

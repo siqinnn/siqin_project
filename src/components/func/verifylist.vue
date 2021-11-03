@@ -7,7 +7,7 @@
       :rules="rules"
     >
       <el-row>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+        <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
           <el-form-item label="密码校验" prop="password">
             <el-input
               type="text"
@@ -16,7 +16,7 @@
             ></el-input>
           </el-form-item>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+        <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
           <el-form-item label="密码校验2" prop="password2">
             <el-input
               type="text"
@@ -25,7 +25,7 @@
             ></el-input>
           </el-form-item>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+        <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
           <el-form-item label="邮箱校验" prop="email">
             <el-input
               type="text"
@@ -34,69 +34,7 @@
             ></el-input>
           </el-form-item>
         </el-col>
-        
-      </el-row>
-      <el-row>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
-          <el-form-item label="数据名称校验" prop="name">
-            <el-input
-              type="text"
-              v-model="queryForm.name"
-              placeholder="汉字，英文，数字，下划线，且只能是英文或者汉字开头！"
-            ></el-input>
-          </el-form-item>
-        </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
-          <el-form-item label="身份证校验" prop="idcard">
-            <el-input
-              type="text"
-              v-model="queryForm.idcard"
-              placeholder="份证号码格式！"
-            ></el-input>
-          </el-form-item>
-        </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
-          <el-form-item label="年龄校验" prop="age">
-            <el-input
-              type="text"
-              v-model="queryForm.age"
-              placeholder="年龄格式！"
-            ></el-input>
-          </el-form-item>
-        </el-col>
-        
-      </el-row>
-      <el-row>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
-          <el-form-item label="英文校验" prop="en">
-            <el-input
-              type="text"
-              v-model="queryForm.en"
-              placeholder="必须只有英文！"
-            ></el-input>
-          </el-form-item>
-        </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
-          <el-form-item label="账号校验" prop="account">
-            <el-input
-              type="text"
-              v-model="queryForm.account"
-              placeholder="账号必须为6-20位字母和数字组合！！"
-            ></el-input>
-          </el-form-item>
-        </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
-          <el-form-item label="中文校验" prop="ch">
-            <el-input
-              type="text"
-              v-model="queryForm.ch"
-              placeholder="必须只有中文！"
-            ></el-input>
-          </el-form-item>
-        </el-col>
-        </el-row>
-         <el-row>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+        <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
           <el-form-item label="手机号校验" prop="phone">
             <el-input
               type="text"
@@ -105,7 +43,27 @@
             ></el-input>
           </el-form-item>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      </el-row>
+      <el-row>
+        <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
+          <el-form-item label="数据名称校验" prop="name">
+            <el-input
+              type="text"
+              v-model="queryForm.name"
+              placeholder="汉字，英文，数字，下划线，且只能是英文或者汉字开头！"
+            ></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
+          <el-form-item label="身份证校验" prop="idcard">
+            <el-input
+              type="text"
+              v-model="queryForm.idcard"
+              placeholder="份证号码格式！"
+            ></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
           <el-form-item label="年龄校验" prop="age">
             <el-input
               type="text"
@@ -114,7 +72,45 @@
             ></el-input>
           </el-form-item>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+        <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
+          <el-form-item label="中文校验" prop="ch">
+            <el-input
+              type="text"
+              v-model="queryForm.ch"
+              placeholder="必须只有中文！"
+            ></el-input>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
+          <el-form-item label="英文校验" prop="en">
+            <el-input
+              type="text"
+              v-model="queryForm.en"
+              placeholder="必须只有英文！"
+            ></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
+          <el-form-item label="账号校验" prop="account">
+            <el-input
+              type="text"
+              v-model="queryForm.account"
+              placeholder="账号必须为6-20位字母和数字组合！！"
+            ></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
+          <el-form-item label="年龄校验" prop="age">
+            <el-input
+              type="text"
+              v-model="queryForm.age"
+              placeholder="年龄格式！"
+            ></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
           <el-form-item label="中文校验" prop="ch">
             <el-input
               type="text"
