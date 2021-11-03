@@ -69,6 +69,14 @@ const routes = [
 				},
 				component: () => import('@/views/js/splitscreen.vue'),
 			},
+			{
+				path: '/gluttonoussnake',
+				name: 'gluttonoussnake',
+				meta: {
+					title: "贪吃蛇"
+				},
+				component: () => import('@/views/js/gluttonoussnake.vue'),
+			},
 			
 		]
 	},
