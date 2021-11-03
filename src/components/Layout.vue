@@ -4,7 +4,7 @@
 
     <el-container>
       <el-header style="height:auto;"><Headerbar /></el-header>
-      <el-container style="height:890px">
+      <el-container style="height:95.6vh">
         <el-aside width="auto"><Siderbar /></el-aside>
         <el-container>
           <el-main><router-view /></el-main>

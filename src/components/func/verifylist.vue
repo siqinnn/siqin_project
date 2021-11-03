@@ -34,15 +34,7 @@
             ></el-input>
           </el-form-item>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
-          <el-form-item label="手机号校验" prop="phone">
-            <el-input
-              type="text"
-              v-model="queryForm.phone"
-              placeholder="手机号格式！"
-            ></el-input>
-          </el-form-item>
-        </el-col>
+        
       </el-row>
       <el-row>
         <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
@@ -72,15 +64,7 @@
             ></el-input>
           </el-form-item>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
-          <el-form-item label="中文校验" prop="ch">
-            <el-input
-              type="text"
-              v-model="queryForm.ch"
-              placeholder="必须只有中文！"
-            ></el-input>
-          </el-form-item>
-        </el-col>
+        
       </el-row>
       <el-row>
         <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
@@ -101,7 +85,27 @@
             ></el-input>
           </el-form-item>
         </el-col>
-        <!-- <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+          <el-form-item label="中文校验" prop="ch">
+            <el-input
+              type="text"
+              v-model="queryForm.ch"
+              placeholder="必须只有中文！"
+            ></el-input>
+          </el-form-item>
+        </el-col>
+        </el-row>
+         <el-row>
+        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+          <el-form-item label="手机号校验" prop="phone">
+            <el-input
+              type="text"
+              v-model="queryForm.phone"
+              placeholder="手机号格式！"
+            ></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
           <el-form-item label="年龄校验" prop="age">
             <el-input
               type="text"
@@ -109,8 +113,8 @@
               placeholder="年龄格式！"
             ></el-input>
           </el-form-item>
-        </el-col> -->
-        <!-- <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+        </el-col>
+        <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
           <el-form-item label="中文校验" prop="ch">
             <el-input
               type="text"
@@ -118,7 +122,7 @@
               placeholder="中文格式！"
             ></el-input>
           </el-form-item>
-        </el-col> -->
+        </el-col>
       </el-row>
     </el-form>
   </div>

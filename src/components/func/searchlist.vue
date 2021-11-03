@@ -122,7 +122,7 @@
           :lg="8"
           :xl="6"
         >
-          <el-form-item label="十一个时间">
+          <el-form-item label="第十一个">
             <el-date-picker
               v-model="queryForm.a11"
               type="date"
@@ -176,8 +176,8 @@
           :xs="24"
           :sm="24"
           :md="12"
-          :lg="24"
-          :xl="12"
+          :lg="6"
+          :xl="6"
         >
           <el-button @click="getList" type="primary">查询</el-button>
           <el-button @click="resetForm('queryForm')" type="info"
@@ -194,9 +194,9 @@
           style="text-align: right;margin-bottom: 22px;"
           :xs="24"
           :sm="24"
-          :md="12"
+          :md="6"
           :lg="24"
-          :xl="6"
+          :xl="24"
         >
           <el-button @click="getList" type="primary">查询</el-button>
           <el-button @click="resetForm('queryForm')" type="info"
