@@ -123,6 +123,29 @@ let jsmethodData = [{
     code: "sessionStorage.setItem('dataParamId', response.data.id);let getId = sessionStorage.getItem('dataParamId')"
 
   },
+  {
+    name: "数组去重方法",
+    code: `const removeDuplicates = (arr) => [...new Set(arr)];
+    console.log(removeDuplicates([1, 2, 2, 3, 3, 4, 4, 5, 5, 6]));`
+  },
+  {
+    name: "生成随机字符串",
+    code: " const randomString = () => Math.random() .toString(36) .slice(2); console.log(randomString());"
+
+  },
+  {
+    name: "翻转字符串",
+    code: `const reverse = (str) => str.split("") .reverse() .join("");reverse('hello world'); // 'dlrow olleh'`
+
+  },
+  {
+    name: "时间格式化",
+    code: `const timeFromDate = (date) => date.toTimeString().slice(0, 8);
+    timeFromDate(new Date(2021, 11, 2, 12, 30, 0)); // 12:30:00
+    timeFromDate(new Date()); // 返回当前时间 09:00:00`
+
+  },
+
 
 ]
 let bugData = [{

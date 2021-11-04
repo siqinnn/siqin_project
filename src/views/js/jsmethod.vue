@@ -19,7 +19,7 @@
 
     <el-table :data="tableData" style="width: 100%" border>
       <el-table-column type="index" width="50" label="序号" align="center"> </el-table-column>
-      <el-table-column prop="name" label="方法名字"> </el-table-column>
+      <el-table-column prop="name" width="400" label="方法名字"> </el-table-column>
       <el-table-column prop="code" label="代码"> </el-table-column>
       <!-- <el-table-column prop="remark" label="备注"> </el-table-column>
       <el-table-column prop="use" label="用法"> </el-table-column> -->
