@@ -19,11 +19,22 @@
     </div>
 
     <el-table :data="tableData" style="width: 100%" border>
-      <el-table-column type="index" width="50" label="序号" align="center"> </el-table-column>
+      <el-table-column
+        v-for="item in columns"
+        :key="item.prop"
+        :prop="item.prop"
+        :label="item.label"
+        :formatter="item.formatter"
+        :width="item.width"
+        :type="item.type"
+      >
+      </el-table-column>
+      <!-- <el-table-column type="index" width="50" label="序号" align="center">
+      </el-table-column>
       <el-table-column prop="name" label="标签名"> </el-table-column>
       <el-table-column prop="explain" label="说明"> </el-table-column>
       <el-table-column prop="remark" label="备注"> </el-table-column>
-      <el-table-column prop="use" label="用法"> </el-table-column>
+      <el-table-column prop="use" label="用法"> </el-table-column> -->
     </el-table>
   </div>
 </template>
@@ -34,6 +45,37 @@ export default {
   name: "labenList",
   data() {
     return {
+      columns: [
+        {
+          label: "序号",
+          type: "index",
+        },
+        {
+          label: "标签名",
+          prop: "name",
+          width:"150"
+        },
+        {
+          label: "说明",
+          prop: "explain",
+          width:"280"
+        },
+        {
+          label: "备注",
+          prop: "remark",
+          width:"220"
+          // formatter(row,column,value){
+          //   return {
+          //     0:"管理员",
+          //     1:"普通用户"
+          //   }[value]
+          // }
+        },
+        {
+          label: "用法",
+          prop: "use",
+        },
+      ],
       inputdata: "",
       tableData: [],
       dialogVisible: false,

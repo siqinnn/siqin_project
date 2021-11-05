@@ -107,6 +107,12 @@ export default {
               title: "split Screen",
               children: [],
             },
+            {
+              index: "9",
+              path: "/mediascreen",
+              title: "media Screen",
+              children: [],
+            },
             // {
             //   index: "9",
             //   path: "/gluttonoussnake",

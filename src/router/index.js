@@ -77,6 +77,14 @@ const routes = [
 				},
 				component: () => import('@/views/js/gluttonoussnake.vue'),
 			},
+			{
+				path: '/mediascreen',
+				name: 'mediascreen',
+				meta: {
+					title: "图片响应式"
+				},
+				component: () => import('@/views/js/mediascreen.vue'),
+			},
 			
 		]
 	},

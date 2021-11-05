@@ -9,7 +9,9 @@
         <div class="allclass leftclass"></div>
       </template>
       <template slot="pane-right">
-        <div class="allclass rightclass"></div>
+        <div class="allclass rightclass">
+          
+        </div>
       </template>
     </split-pane>
   </div>
