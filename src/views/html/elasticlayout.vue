@@ -4,7 +4,7 @@
       <span class="el-icon-ice-tea"></span>
       <span>弹性布局display：flex；</span>
     </div>
-    <el-button @click="exportExcel" style="float:right;margin-bottom:10px" type="warning" plain>点击导出弹性布局</el-button>
+    <el-button @click="exportExcel" style="float:right;margin-bottom:10px" type="primary" plain>点击导出弹性布局</el-button>
     <el-table :data="tableData" style="width: 100%" border id="out-eltable">
       <el-table-column type="index" width="50" label="序号" align="center">
       </el-table-column>

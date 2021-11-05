@@ -4,7 +4,7 @@
       <span class="el-icon-video-camera"></span>
       <span>图片响应式</span>
       <span class="button-class"
-        ><el-button @click="viewclick('screen')" type="warning" plain>查看代码</el-button></span
+        ><el-button @click="viewclick('screen')" type="primary" plain>查看代码</el-button></span
       >
     </div>
 

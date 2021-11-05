@@ -4,7 +4,7 @@
     <div class="titlediv">
       <span class="el-icon-video-camera"></span>
       <span>分屏功能</span>
-      <span class="button-class"><el-button @click="viewclick('screen')" type="warning" plain>查看代码</el-button></span>
+      <span class="button-class"><el-button @click="viewclick('screen')" type="primary" plain>查看代码</el-button></span>
     </div>
     <split-pane :value.sync="offset">
       <template slot="pane-left">
