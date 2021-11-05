@@ -45,7 +45,7 @@
         <div class="grid-content bg-purple">
           <span class="smalltitle">拖拽功能</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('drag')">查看代码</el-button>
+            <el-button @click="viewclick('drag')" type="warning" plain>查看代码</el-button>
           </span>
           <dragList id="dragid" />
         </div>
@@ -54,7 +54,7 @@
         ><div class="grid-content bg-purple-light">
           <span class="smalltitle">复制粘贴功能</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('copy')">查看代码</el-button>
+            <el-button @click="viewclick('copy')" type="warning" plain>查看代码</el-button>
           </span>
           <copyandpaste /></div
       ></el-col>
@@ -62,7 +62,7 @@
         ><div class="grid-content bg-purple-light grid-contentw">
           <span class="smalltitle">搜索部分超出下拉</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('search')">查看代码</el-button>
+            <el-button @click="viewclick('search')" type="warning" plain>查看代码</el-button>
           </span>
           <searchlist /></div
       ></el-col>
@@ -70,7 +70,7 @@
         ><div class="grid-content bg-purple-light grid-contentw">
           <span class="smalltitle">校验</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('verify')">查看代码</el-button>
+            <el-button @click="viewclick('verify')" type="warning" plain>查看代码</el-button>
           </span>
           <verifylist /></div
       ></el-col>
@@ -78,7 +78,7 @@
         ><div class="grid-content bg-purple-light grid-contentw">
           <span class="smalltitle">数据可视化屏幕自适应</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('charts')">查看代码</el-button>
+            <el-button @click="viewclick('charts')" type="warning" plain>查看代码</el-button>
           </span>
           <echartlist /></div
       ></el-col>
@@ -86,7 +86,7 @@
         ><div class="grid-content bg-purple bg-purple-margin">
           <span class="smalltitle">树的子内拖拽新增编辑删除</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('tree')">查看代码</el-button>
+            <el-button @click="viewclick('tree')" type="warning" plain>查看代码</el-button>
           </span>
           <treelist /></div
       ></el-col>
@@ -94,7 +94,7 @@
         ><div class="grid-content bg-purple-light bg-purple-margin">
           <span class="smalltitle">table表格内编辑</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('tableedit')">查看代码</el-button>
+            <el-button @click="viewclick('tableedit')" type="warning" plain>查看代码</el-button>
           </span>
           <tableditlist /></div
       ></el-col>
