@@ -40,6 +40,20 @@
         </div>
       </div>
     </div>
+    <div id="wrap">
+      <ul id="list">
+        <img src="@/assets/1.jpg" alt="" />
+        <img src="@/assets/2.jpg" alt="" />
+        <img src="@/assets/3.jpg" alt="" />
+        <img src="@/assets/4.jpg" alt="" />
+        <img src="@/assets/5.jpg" alt="" />
+        <img src="@/assets/1.jpg" alt="" />
+        <img src="@/assets/2.jpg" alt="" />
+        <img src="@/assets/3.jpg" alt="" />
+        <img src="@/assets/4.jpg" alt="" />
+        <img src="@/assets/5.jpg" alt="" />
+      </ul>
+    </div>
   </div>
 </template>
 <script>
@@ -128,6 +142,53 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#wrap {
+  width: 1000px;
+  height: 200px;
+  border: 1px solid #000;
+  position: relative;
+  margin: 20px auto;
+  overflow: hidden;
+}
+#list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: 6s move infinite linear;
+  width: 200%;
+}
+#list img {
+  list-style: none;
+  width: 196px;
+  height: 196px;
+  border: 1px solid #fff;
+  background: rgb(163, 151, 151);
+  color: #fff;
+  font: 50px/98px Arial;
+  text-align: center;
+  float: left;
+}
+@-webkit-keyframes move {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -1000px;
+  }
+}
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -1000px;
+  }
+}
+#wrap:hover #list {
+  -webkit-animation-play-state: paused; /*动画暂停播放*/
+}
 .index {
   width: 100%;
   .flexbox {
