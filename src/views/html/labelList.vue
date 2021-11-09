@@ -3,7 +3,10 @@
     <div class="titlediv">
       <span class="el-icon-ice-tea"></span>
       <span>html标签</span>
-
+      <p
+        class="nav-link"
+        >ᠥᠨᠥᠳᠥᠷ ᠤᠨ ᠬᠥᠬᠡᠬᠤᠲᠠ</p
+      >
       <el-input
         style="width:20%;float:right"
         placeholder="请输入内容"
@@ -53,17 +56,17 @@ export default {
         {
           label: "标签名",
           prop: "name",
-          width:"150"
+          width: "150",
         },
         {
           label: "说明",
           prop: "explain",
-          width:"280"
+          width: "280",
         },
         {
           label: "备注",
           prop: "remark",
-          width:"220"
+          width: "220",
           // formatter(row,column,value){
           //   return {
           //     0:"管理员",
@@ -107,6 +110,13 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+.nav-link{
+    margin: 0 auto;  
+    height: 180px;  
+    writing-mode: vertical-lr;
+    // writing-mode: tb-lr;
+    font-size: 28px;
+}
 .titlediv {
   font-size: 16px;
   font-weight: 600;
