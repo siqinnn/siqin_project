@@ -70,6 +70,14 @@ const routes = [
 				component: () => import('@/views/js/splitscreen.vue'),
 			},
 			{
+				path: '/prictice',
+				name: 'prictice',
+				meta: {
+					title: "学习"
+				},
+				component: () => import('@/views/js/prictice.vue'),
+			},
+			{
 				path: '/gluttonoussnake',
 				name: 'gluttonoussnake',
 				meta: {

@@ -113,6 +113,12 @@ export default {
               title: "media Screen",
               children: [],
             },
+            {
+              index: "10",
+              path: "/prictice",
+              title: "to Study",
+              children: [],
+            },
             // {
             //   index: "9",
             //   path: "/gluttonoussnake",

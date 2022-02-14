@@ -45,7 +45,9 @@
         <div class="grid-content bg-purple">
           <span class="smalltitle">拖拽功能</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('drag')" type="primary" plain>查看代码</el-button>
+            <el-button @click="viewclick('drag')" type="primary" plain
+              >查看代码</el-button
+            >
           </span>
           <dragList id="dragid" />
         </div>
@@ -54,7 +56,9 @@
         ><div class="grid-content bg-purple-light">
           <span class="smalltitle">复制粘贴功能</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('copy')" type="primary" plain>查看代码</el-button>
+            <el-button @click="viewclick('copy')" type="primary" plain
+              >查看代码</el-button
+            >
           </span>
           <copyandpaste /></div
       ></el-col>
@@ -62,7 +66,9 @@
         ><div class="grid-content bg-purple-light grid-contentw">
           <span class="smalltitle">搜索部分超出下拉</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('search')" type="primary" plain>查看代码</el-button>
+            <el-button @click="viewclick('search')" type="primary" plain
+              >查看代码</el-button
+            >
           </span>
           <searchlist /></div
       ></el-col>
@@ -70,7 +76,9 @@
         ><div class="grid-content bg-purple-light grid-contentw">
           <span class="smalltitle">校验</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('verify')" type="primary" plain>查看代码</el-button>
+            <el-button @click="viewclick('verify')" type="primary" plain
+              >查看代码</el-button
+            >
           </span>
           <verifylist /></div
       ></el-col>
@@ -78,7 +86,9 @@
         ><div class="grid-content bg-purple-light grid-contentw">
           <span class="smalltitle">数据可视化屏幕自适应</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('charts')" type="primary" plain>查看代码</el-button>
+            <el-button @click="viewclick('charts')" type="primary" plain
+              >查看代码</el-button
+            >
           </span>
           <echartlist /></div
       ></el-col>
@@ -86,7 +96,9 @@
         ><div class="grid-content bg-purple bg-purple-margin">
           <span class="smalltitle">树的子内拖拽新增编辑删除</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('tree')" type="primary" plain>查看代码</el-button>
+            <el-button @click="viewclick('tree')" type="primary" plain
+              >查看代码</el-button
+            >
           </span>
           <treelist /></div
       ></el-col>
@@ -94,10 +106,13 @@
         ><div class="grid-content bg-purple-light bg-purple-margin">
           <span class="smalltitle">table表格内编辑</span>
           <span class="smalltitle smalltitle1">
-            <el-button @click="viewclick('tableedit')" type="primary" plain>查看代码</el-button>
+            <el-button @click="viewclick('tableedit')" type="primary" plain
+              >查看代码</el-button
+            >
           </span>
           <tableditlist /></div
       ></el-col>
+     
     </el-row>
     <el-dialog
       title="查看代码"
@@ -150,6 +165,9 @@ export default {
   name: "somefeatures",
   data() {
     return {
+      endvalue: "",
+      startvalue: "",
+      inputvalue: "",
       clitype: "",
       editor: null,
       codeData: "",
@@ -163,7 +181,8 @@ export default {
       dialogVisible: false,
     };
   },
-  computed: {},
+  computed: {
+  },
   components: {
     tableditlist,
     copyandpaste,
@@ -176,6 +195,12 @@ export default {
     // quillEditor,
   },
   methods: {
+    startchange(value) {
+      console.log(value);
+    },
+    endchange(value) {
+      console.log(value);
+    },
     onMounted() {},
     onCodeChange() {},
     viewclick(type) {
@@ -292,7 +317,7 @@ export default {
     margin-top: 20px;
     width: 97.5%;
   }
-  .bg-purple-margin{
+  .bg-purple-margin {
     margin-top: 20px;
   }
 
