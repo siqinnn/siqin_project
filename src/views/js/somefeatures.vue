@@ -1,8 +1,9 @@
 <template>
-  <div class="somefeatures">
+  <div class="somefeatures" id="somefeaturesid">
     <div class="titlediv">
       <span class="el-icon-ice-tea"></span>
       <span>一些功能</span>
+      <el-button @click="getPdf" style="float:right;">下载页面</el-button>
     </div>
     <el-row :gutter="20">
       <el-col :span="24" style="margin-bottom:20px" class="buttonclass">
@@ -159,7 +160,8 @@ import tableditlist from "@/components/func/tableditlist.vue";
 import verifylist from "@/components/func/verifylist.vue";
 import echartlist from "@/components/func/echartlist.vue";
 import treelist from "@/components/func/treelist.vue";
-
+import html2Canvas from 'html2canvas'
+import JsPDF from 'jspdf'
 export default {
   inject: ["reload"],
   name: "somefeatures",
@@ -195,6 +197,37 @@ export default {
     // quillEditor,
   },
   methods: {
+    
+    getPdf () {
+      var title = '当前页面下载';
+      html2Canvas(document.querySelector('#somefeaturesid'), {
+        allowTaint: true
+      }).then(function (canvas) {
+        let contentWidth = canvas.width
+        let contentHeight = canvas.height
+        let pageHeight = contentWidth / 592.28 * 841.89
+        let leftHeight = contentHeight
+        let position = 0
+        let imgWidth = 595.28
+        let imgHeight = 592.28 / contentWidth * contentHeight
+        let pageData = canvas.toDataURL('image/jpeg', 1.0)
+        let PDF = new JsPDF('', 'pt', 'a4')
+        if (leftHeight < pageHeight) {
+          PDF.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight)
+        } else {
+          while (leftHeight > 0) {
+            PDF.addImage(pageData, 'JPEG', 0, position, imgWidth, imgHeight)
+            leftHeight -= pageHeight
+            position -= 841.89
+            if (leftHeight > 0) {
+              PDF.addPage()
+            }
+          }
+        }
+        PDF.save(title + '.pdf')
+      }
+      )
+    },
     startchange(value) {
       console.log(value);
     },

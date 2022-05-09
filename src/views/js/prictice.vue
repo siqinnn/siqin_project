@@ -57,7 +57,7 @@ export default {
 
                             if(r+g+b==0){
                                 var bubble = document.createElement("img");
-                                bubble.src = "bubble.png";
+                                bubble.src = "@/assets/bm1.jpg";
                                 bubble.setAttribute("class","bubble");
 
                                 var bubbleSize = Math.random()*10+20;

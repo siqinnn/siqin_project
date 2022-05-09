@@ -145,6 +145,48 @@ let jsmethodData = [{
     timeFromDate(new Date()); // 返回当前时间 09:00:00`
 
   },
+  {
+    name: "钱转成逗号，斜杠识别不了改成￥",
+    code: `const ThousandNum = num => num.toString().replace(/￥B(?=(￥d{3})+(?!￥d))/g, ",");
+    const money = ThousandNum(1000000);`
+
+  },
+  {
+    name: "生成随机id",
+    code: `const RandomId = len => Math.random().toString(36).substr(3, len);
+    const id = RandomId(10);`
+
+  },
+  {
+    name: "生成随机颜色",
+    code: `const RandomColor = () => "#" + Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0");
+    const color = RandomColor();`
+
+  },
+  {
+    name: "变成时间戳",
+    code: `const timestamp = +new Date("2022-03-22");`
+
+  },
+  {
+    name: "小数点",
+    code: `const RoundNum = (num, decimal) => Math.round(num * 10 ** decimal) / 10 ** decimal;
+    const num = RoundNum(1.2345, 2);`
+
+  },
+  {
+    name: "取最小最大数",
+    code: `const arr = [0, 1, 2, 3];
+    const min = Math.min(...arr);
+    const max = Math.max(...arr);`
+
+  },
+  {
+    name: "生成范围随机数",
+    code: `const RandomNum = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+    const num = RandomNum(1, 10); // 5`
+
+  },
 
 
 ]
