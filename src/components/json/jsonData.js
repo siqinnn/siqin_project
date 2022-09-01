@@ -81,7 +81,7 @@ let disflexData = [{
   },
 ]
 let jsmethodData = [{
-    name: "对比循环后返回一个值",
+    name: "循环后返回一个值",
     code: "this.city = this.eparchyInfo.find((val) => val.eparchyId == this.alarmForm.eparchyCode).eparchyName;"
   },
   {

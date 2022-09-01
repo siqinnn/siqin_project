@@ -101,7 +101,7 @@ export default {
           break;
         default:
           throw new Error("蛇的移动规则判断出错");
-          // break;
+        // break;
       }
       this.structureArray[y].splice(x, 1, { state: 2, code: ++headCode }); // 生成新的蛇头
       this.snakeHead = { x, y };
@@ -220,7 +220,7 @@ export default {
           break;
         default:
           throw new Error("蛇的死亡规则判断错误");
-          // break;
+        // break;
       }
       return true;
     },
